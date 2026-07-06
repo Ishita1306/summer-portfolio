@@ -1,0 +1,136 @@
+/* Education Styles */
+.education {
+  padding: 6rem 0;
+}
+
+.education h2 {
+  text-align: center;
+}
+
+.education-section {
+  margin-bottom: 3rem;
+}
+
+.education-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.education-list,
+.training-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-item,
+.training-item {
+  background-color: var(--bg-light);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.education-item:hover,
+.training-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.education-header,
+.training-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-header h4,
+.training-header h4 {
+  margin: 0;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.year,
+.date {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.field {
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.school,
+.organization {
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.details,
+.description {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.cert-badge {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cert-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education {
+    padding: 3rem 0;
+  }
+
+  .education-header,
+  .training-header {
+    flex-direction: column;
+  }
+
+  .year,
+  .date {
+    align-self: flex-start;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
